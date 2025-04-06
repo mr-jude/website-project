@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore the World</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+           
+            color: #333;
+        }
+
+        header {
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #555;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #007bff;
+        }
+
+        .hero {
+            background-image: url('fly.jpg'); 
+            background-size:fill;
+            color: #fff;
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        .hero h1 {
+            font-size: 3.5em;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        .search-bar {
+            display: flex;
+            justify-content: center;
+        }
+
+        .search-bar input[type="text"] {
+            padding: 15px;
+            border: none;
+            border-radius: 5px 0 0 5px;
+            font-size: 1em;
+            width: 300px;
+        }
+
+        .search-bar button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 15px 20px;
+            border-radius: 0 5px 5px 0;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .search-bar button:hover {
+            background-color: #0056b3;
+        }
+
+        .featured-destinations {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .featured-destinations h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .destinations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .destination-card {
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .destination-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .destination-card h3 {
+            padding: 15px;
+            margin: 0;
+            font-size: 1.5em;
+        }
+
+        .destination-card p {
+            padding: 0 15px 15px;
+            margin: 0;
+            color: #777;
+        }
+
+        .destination-card a {
+            display: block;
+            background-color: #f0f0f0;
+            color: #333;
+            text-decoration: none;
+            padding: 10px 15px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .destination-card a:hover {
+            background-color: #ddd;
+        }
+
+        .featured-experiences {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            text-align: center;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .featured-experiences h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .experiences-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .experience-card {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .experience-card img {
+            width: 100%;
+            height: 200px; /
+            object-fit: cover;
+            display: block;
+        }
+
+        .experience-info {
+            padding: 15px;
+            text-align: left;
+            flex-grow: 1;
+        }
+
+        .experience-info h3 {
+            margin-top: 0;
+            font-size: 1.3em;
+            margin-bottom: 10px;
+        }
+
+        .experience-info p {
+            color: #777;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+
+        .experience-card a {
+            display: block;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 15px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .experience-card a:hover {
+            background-color: #0056b3;
+        }
+
+        .call-to-action {
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .call-to-action h2 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+
+        .call-to-action p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            background-color: #fff;
+            color: #007bff;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #f0f0f0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+        }
+        .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 5px;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.random-destination {
+    margin: 20px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}s
+    </style>
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <div class="logo">Wanderlust</div>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="destinations.html">Destinations</a></li>
+              <li><a href="experiences.html">Experiences</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+        <div class="hero">
+            <h1>Discover Your Next Adventure</h1>
+            <p>Unforgettable journeys await. Where will you go next?</p>
+            <div class="search-bar">
+                <input type="text" placeholder="Where are you going?">
+                <button>Search</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="featured-destinations">
+        <h2>Featured Destinations</h2>
+        <div class="destinations-grid">
+            <div class="destination-card">
+                <img src="maldives.jpg" alt="Maldives">
+                <h3>Tropical Paradise</h3>
+                <p>Escape to sun-kissed beaches and turquoise waters.</p>
+                <a href="#">Explore</a>
+            </div>
+            <div class="destination-card">
+                <img src="santorini.jpg" alt="Santorini">
+                <h3>Mountain Majesty</h3>
+                <p>Hike through breathtaking landscapes and conquer new heights.</p>
+                <a href="#">Explore</a>
+            </div>
+            <div class="destination-card">
+                <img src="paris.jpg" alt="Paris">
+                <h3>City Explorer</h3>
+                <p>Immerse yourself in vibrant cultures and bustling streets.</p>
+                <a href="#">Explore</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-experiences">
+        <h2>Featured Experiences</h2>
+        <div class="experiences-grid">
+            <div class="experience-card">
+                <img src="africa.webp" alt="Venice">
+                <div class="experience-info">
+                    <h3>Safari Adventure</h3>
+                    <p>Witness the incredible wildlife of the African savanna.</p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+            <div class="experience-card">
+                <img src="barcelona.jpg" alt="Barcelona">
+                <div class="experience-info">
+                    <h3>Cultural Immersion Tour</h3>
+                    <p>Discover the rich traditions and local life of Southeast Asia.</p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+            <div class="experience-card">
+                <img src="monaco.jpg" alt="Monaco">
+                <div class="experience-info">
+                    <h3>Relaxing Beach Getaway</h3>
+                    <p>Unwind on pristine beaches with crystal-clear waters.</p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="call-to-action">
+        <h2>Ready to Start Your Adventure?</h2>
+        <p>Browse our curated trips and find the perfect getaway.</p>
+        <button class="cta-button"> <a href="destinations.html">View all trips</a></button>
+        
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Wanderlust Travel</p>
+    </footer>
+   
+<script src="script.js"></script>
+</body>
+</html>

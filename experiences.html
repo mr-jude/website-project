@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wanderlust Experiences</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #007bff;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    nav ul li {
+      margin-left: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #555;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #007bff;
+    }
+
+    .page-banner {
+      background-image: url('2.jpg');
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .page-banner h1 {
+      font-size: 3em;
+      margin: 0;
+    }
+
+    .experiences-section {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 20px;
+      background-image: url('carb.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-radius: 10px;
+    }
+
+    .experiences-section h2 {
+      text-align: center;
+      font-size: 2em;
+      margin-bottom: 30px;
+      color: #fff;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+    }
+
+    .experiences-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .experience-card {
+      background-color: rgba(255, 255, 255, 0.95);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .experience-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .experience-info {
+      padding: 15px;
+      flex-grow: 1;
+    }
+
+    .experience-info h3 {
+      margin-top: 0;
+      font-size: 1.5em;
+    }
+
+    .experience-info p {
+      color: #777;
+      font-size: 0.95em;
+    }
+
+    .experience-card a {
+      display: block;
+      background-color: #007bff;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .experience-card a:hover {
+      background-color: #0056b3;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #333;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <div class="logo">Wanderlust</div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+        <li><a href="experiences.html">Experiences</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="page-banner">
+    <h1>Immersive Travel Experiences</h1>
+    <p>Explore the world beyond the typical tourist path</p>
+  </section>
+
+  <section class="experiences-section">
+    <h2>Top Experiences Around the World</h2>
+    <div class="experiences-grid">
+      <div class="experience-card">
+        <img src="des.jpg" alt="Desert Safari">
+        <div class="experience-info">
+          <h3>Desert Safari</h3>
+          <p>Ride through golden dunes and enjoy authentic Bedouin culture under the stars.</p>
+        </div>
+        <a href="#">Explore</a>
+      </div>
+
+      <div class="experience-card">
+        <img src="nort.jpg" alt="Northern Lights">
+        <div class="experience-info">
+          <h3>Chasing the Northern Lights</h3>
+          <p>Experience the magic of auroras in Iceland or Norway.</p>
+        </div>
+        <a href="#">Explore</a>
+      </div>
+
+      <div class="experience-card">
+        <img src="temp.jpg" alt="Temple Retreat">
+        <div class="experience-info">
+          <h3>Temple Retreat</h3>
+          <p>Find inner peace in ancient monasteries with meditation and silence.</p>
+        </div>
+        <a href="#">Explore</a>
+      </div>
+
+      <div class="experience-card">
+        <img src="bang.webp" alt="Street Food Tour">
+        <div class="experience-info">
+          <h3>Street Food Tour</h3>
+          <p>Eat your way through the backstreets of Bangkok, Mexico City, or Marrakech.</p>
+        </div>
+        <a href="#">Explore</a>
+      </div>
+
+      <div class="experience-card">
+        <img src="africa.webp" alt="African Safari">
+        <div class="experience-info">
+          <h3>African Safari</h3>
+          <p>Witness the Big Five in their natural habitat on guided safaris.</p>
+        </div>
+        <a href="#">Explore</a>
+      </div>
+
+      <div class="experience-card">
+        <img src="surf.jpg" alt="Surfing Adventure">
+        <div class="experience-info">
+          <h3>Surfing Adventures</h3>
+          <p>Catch waves in Bali, Hawaii, or Portugal with expert instructors.</p>
+        </div>
+        <a href="#">Explore</a>
+      </div>
+
+      <div class="experience-card">
+        <img src="ball.jpg" alt="Hot Air Ballooning">
+        <div class="experience-info">
+          <h3>Hot Air Ballooning</h3>
+          <p>Soar above Cappadocia or the Serengeti in magical sunrise flights.</p>
+        </div>
+        <a href="#">Explore</a>
+      </div>
+
+      <div class="experience-card">
+        <img src="swim.jpg" alt="Scuba Diving">
+        <div class="experience-info">
+          <h3>Scuba Diving</h3>
+          <p>Explore coral reefs and sunken ships in crystal-clear waters.</p>
+        </div>
+        <a href="#">Explore</a>
+      </div>
+
+      <div class="experience-card">
+        <img src="vine.jpg" alt="Wine Tasting">
+        <div class="experience-info">
+          <h3>Vineyard Tasting</h3>
+          <p>Enjoy local wines and fresh cuisine in scenic countryside retreats.</p>
+        </div>
+        <a href="#">Explore</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Wanderlust Travel</p>
+  </footer>
+
+</body>
+</html>

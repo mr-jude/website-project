@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View All Deals - Wanderlust</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #555;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #007bff;
+        }
+
+        .deals-banner {
+            background-image: url('3.jpg'); /* Replace with your image */
+            background-size: cover;
+            color: #fff;
+            text-align: center;
+            padding: 80px 0;
+        }
+
+        .deals-banner h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        .deals-banner p {
+            font-size: 1.2em;
+        }
+
+        .deals-section {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .deals-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .deal-card {
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .deal-card img {
+            width: 100%;
+            height: 200px; /* Adjust as needed */
+            object-fit: cover;
+            display: block;
+        }
+
+        .deal-info {
+            padding: 15px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .deal-info h3 {
+            margin-top: 0;
+            font-size: 1.5em;
+            margin-bottom: 5px;
+        }
+
+        .deal-details {
+            color: #777;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+
+        .deal-price {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #007bff;
+            margin-bottom: 15px;
+        }
+
+        .deal-card a {
+            display: block;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 15px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .deal-card a:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Wanderlust</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                
+                <li><a href="#">Experiences</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="deals-banner">
+        <h1>Amazing Travel Deals</h1>
+        <p>Discover incredible discounts on your next adventure!</p>
+    </section>
+
+    <section class="deals-section">
+        <div class="deals-grid">
+            <div class="deal-card">
+                <img src="bali.jpg" alt="Deal 1">
+                <div class="deal-info">
+                    <h3>Luxury Beach Resort in Bali</h3>
+                    <div class="deal-details">
+                        <p>7 Nights | Breakfast Included | Spa Credit</p>
+                    </div>
+                    <p class="deal-price">From $799</p>
+                    <a href="#">View Deal</a>
+                </div>
+            </div>
+            <div class="deal-card">
+                <img src="paris.jpg" alt="Deal 2">
+                <div class="deal-info">
+                    <h3>European City Break: Paris & Rome</h3>
+                    <div class="deal-details">
+                        <p>5 Days | Flights & Hotel | Guided Tours</p>
+                    </div>
+                    <p class="deal-price">From $999</p>
+                    <a href="#">View Deal</a>
+                </div>
+            </div>
+            <div class="deal-card">
+                <img src="him.avif" alt="Deal 3">
+                <div class="deal-info">
+                    <h3>Adventure Trek in the Himalayas</h3>
+                    <div class="deal-details">
+                        <p>10 Days | All Inclusive | Expert Guides</p>
+                    </div>
+                    <p class="deal-price">From $1299</p>
+                    <a href="#">View Deal</a>
+                </div>
+            </div>
+            <div class="deal-card">
+                <img src="carb.jpg" alt="Deal 4">
+                <div class="deal-info">
+                    <h3>Cruise to the Caribbean Islands</h3>
+                    <div class="deal-details">
+                        <p>7 Days | All Meals | Onboard Entertainment</p>
+                    </div>
+                    <p class="deal-price">From $699</p>
+                    <a href="#">View Deal</a>
+                </div>
+            </div>
+            <div class="deal-card">
+                <img src="deal5.jpg" alt="Deal 5">
+                <div class="deal-info">
+                    <h3>Safari in Tanzania</h3>
+                    <div class="deal-details">
+                        <p>6 Days | Game Drives | Luxury Lodges</p>
+                    </div>
+                    <p class="deal-price">From $1499</p>
+                    <a href="#">View Deal</a>
+                </div>
+            </div>
+            <div class="deal-card">
+                <img src="deal6.jpg" alt="Deal 6">
+                <div class="deal-info">
+                    <h3>Explore Ancient Egypt</h3>
+                    <div class="deal-details">
+                        <p>8 Days | Nile Cruise | Historical Sites</p>
+                    </div>
+                    <p class="deal-price">From $1099</p>
+                    <a href="#">View Deal</a>
+                </div>
+            </div>
+            </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Wanderlust Travel</p>
+    </footer>
+</body>
+</html>
